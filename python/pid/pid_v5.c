@@ -92,7 +92,7 @@ int main (void)
 	}
 
 	// Save variables to file
-	FILE *fp = fopen("/Users/rafa/Programas/python/pid/data_pid.txt", "w");
+	FILE *fp = fopen("/home/rafa/Documentos/Programas/python/pid/data_pid.txt", "w");
 	if (fp == NULL)
 	{
 		perror("Error opening file");
@@ -111,7 +111,7 @@ int main (void)
 	printf("\nData saved to data_pid.txt\n");
 
 	char cmd[256];
-	snprintf(cmd, sizeof cmd, "/Users/rafa/Programas/.venv/bin/python /Users/rafa/Programas/python/pid/graphpid.py");
+	snprintf(cmd, sizeof cmd, "/home/rafa/Documentos/Programas/.venv/bin/python /home/rafa/Documentos/Programas/python/pid/graphpid.py");
 	if (system(cmd) == -1)
 	{
 		perror("Error running Python script");

@@ -5,7 +5,7 @@ Script para graficar los resultados del PID
 import matplotlib.pyplot as plt
 import numpy as np
 
-data = np.loadtxt('/Users/rafa/Programas/python/pid/data_pid.txt', skiprows=1)
+data = np.loadtxt('/home/rafa/Documentos/Programas/python/pid/data_pid.txt', skiprows=1)
 i, referencia, error, accontrol, salida = data.T
 
 fig, axs = plt.subplots(2, 1, figsize=(12, 10), sharex=True)
