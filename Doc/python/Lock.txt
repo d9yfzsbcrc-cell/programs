@@ -1,0 +1,16 @@
+Asegurarnos de que un threading.Lock() existe y funciona bien utilizando un with, es decir si dicha en esa variable
+funcionan los métodos acquire() y release():
+
+try:
+    _tmp = lock
+    if not (hasattr(lock, '__enter__') and hasattr(lock, '__exit__')):
+        lock = threading.Lock()
+except NameError:
+    lock = threading.Lock()
+    
+La función hasattr(objeto, atributo) devuelve un bool si dicho objeto tiene ese atributo.
+El método __enter__() se llama cuando se adquiere un recurso (por ejemplo en una sentencia with: y el método __exit__
+se ejecuta cuando se libera el recurso.
+
+Por qué el _tmp = lock??
+

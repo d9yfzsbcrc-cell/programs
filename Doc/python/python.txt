@@ -1,0 +1,21 @@
+Ensure you can run pip from the command line
+
+Additionally, you’ll need to make sure you have pip available. You can check this by running:
+Unix/macOS
+
+python3 -m pip --version
+
+Optionally, create a virtual environment
+
+See section below for details, but here’s the basic venv [3] command to use on a typical Linux system:
+Unix/macOS
+
+python3 -m venv tutorial_env
+source tutorial_env/bin/activate
+
+deactivate
+
+pip freeze	# Lista las dependencia instaladas en el entorno y sus versiones
+pip freeze > requeriments.txt
+
+pip install -r requeriments.txt # Instala las dependencias

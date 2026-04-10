@@ -1,0 +1,23 @@
+Handling Spawn Timeouts (Server Fails to Start)
+
+sudo tljh-config set JupyterHub.concurrent_spawn_limit 100 # Or higher/0 to disable
+sudo tljh-config reload
+
+Key tljh-config Commands
+
+    sudo tljh-config set <path> <value>: Set a configuration value.
+    sudo tljh-config add-item <path> <value>: Add to a list (e.g., admins).
+    sudo tljh-config unset <path>: Remove a setting.
+    sudo tljh-config reload: Apply changes. 
+
+tljh- config -h
+
+Adjusting Idle Timeout (Culling)
+This is the most common configuration for "time spawn" issues, controlling how long a running server stays active before being stopped due to inactivity.
+
+    Set the timeout:
+    bash
+
+sudo tljh-config set services.cull.timeout 86400 # 86400 seconds = 24 hours
+
+    Use 86400 for 24 hours, or other values like 3600 (1 hour).

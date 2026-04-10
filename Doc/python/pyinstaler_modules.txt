@@ -1,0 +1,10 @@
+(.venv) rafa@Ares ~/Programas/python$ /Users/rafa/Programas/.venv/bin/pyinstaller --paths /Users/rafa/Programas/.venv/lib/python3.14/site-packages pycalc.py
+
+# Más corto
+(.venv) rafa@Ares ~/Programas/python$ /Users/rafa/Programas/.venv/bin/pyinstaller pycalc.py
+
+# No hace falta tener el venv activado, solo poner la ruta de pynstaller de ese venv
+rafa@Ares ~/Programas/python$ /Users/rafa/Programas/.venv/bin/pyinstaller pycalc.py
+
+# Genera una app
+/Users/rafa/Programas/.venv/bin/pyinstaller --noconsole pycalc.py
